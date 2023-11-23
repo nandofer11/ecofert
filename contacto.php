@@ -1,31 +1,20 @@
 <?php
 
 session_start();
-include("php/conexion.php");
 
-if (isset($_SESSION['datos'])) {
-    $usuario = $_SESSION['datos']['rango'];
-    $admitido = "admin";
-    if ($usuario == $admitido) {
-        // Si es admin
-    } else {
-        header("Location: index.php");
-    }
-} else {
-    header("Location: index.php");
-}
-
-if (isset($_GET['id']) and isset($_GET['url'])) {
+if (isset($_GET['url'])) {
+    $url = $_GET['url'];
 }
 
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
-    <title>Tea House - Tea Shop Website Template</title>
+    <title>Contacto | Ecofert</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -147,10 +136,7 @@ if (isset($_GET['id']) and isset($_GET['url'])) {
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="h-100">
-                        <iframe class="w-100 rounded"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001156.4288297426!2d-78.01371936852176!3d42.72876761954724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sbd!4v1603794290143!5m2!1sen!2sbd"
-                        frameborder="0" style="height: 100%; min-height: 300px; border:0;" allowfullscreen="" aria-hidden="false"
-                        tabindex="0"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63197.61299561856!2d-79.06127210473778!3d-8.116668606635606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91ad3d7fe3fae92d%3A0xd3bc7d125d4e8508!2sTrujillo!5e0!3m2!1ses!2spe!4v1698300605626!5m2!1ses!2spe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
             </div>

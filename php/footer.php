@@ -11,10 +11,11 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-primary mb-4">Menu</h4>
-                    <a class="btn btn-link" href="../inicio.php">Inicio</a>
+                    <a class="btn btn-link" href="../index.php">Inicio</a>
                     <a class="btn btn-link" href="../empresa.php">Empresa</a>
                     <a class="btn btn-link" href="../catalogo.php">Catálogo</a>
                     <a class="btn btn-link" href="../contacto.php">Contacto</a>
+                    <a class="btn btn-link" href="../noticias.php">Noticias</a>
                     <a class="btn btn-link" href="#">Preguntas frecuentes</a>
                 </div>
                 <div class="col-lg-3 col-md-6">

@@ -8,12 +8,13 @@ if (isset($_GET['url'])) {
 
 ?>
 
+
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
-<meta charset="utf-8">
-    <title>Iniciar Sesión | Ecofert</title>
+    <meta charset="utf-8">
+    <title>Noticias</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -39,7 +40,6 @@ if (isset($_GET['url'])) {
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-
 </head>
 
 <body>
@@ -51,7 +51,7 @@ if (isset($_GET['url'])) {
 
 
     <!-- Navbar Start -->
-    <div class="container-fluid bg-white sticky-top mycss">
+    <div class="container-fluid bg-white sticky-top">
         <div class="container">
             <?php require("php/navbar.php") ?>
         </div>
@@ -59,74 +59,68 @@ if (isset($_GET['url'])) {
     </div>
     <!-- Navbar End -->
 
-    <?php if (isset($_SESSION['loginCarrito'])) { ?>
-        <div class="inicia_primero" id="ventana-emergente">
-            <?php echo $_SESSION['loginCarrito']; ?>
-            <span class="icon-cancel-circle" id="close-alert"></span>
-        </div>
-    <?php session_unset();
-    } ?>
 
-    <?php
-    if (isset($_SESSION['mensaje'])) { ?>
-        <div class="inicia_primero" id="ventana-emergente">
-            <?php echo $_SESSION['mensaje']; ?>
-            <span class="icon-cancel-circle" id="close-alert"></span>
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container text-center py-5">
+            <h1 class="display-2 text-dark mb-4 animated slideInDown">Noticias</h1>
         </div>
-    <?php session_unset();
-    } ?>
+    </div>
+    <!-- Page Header End -->
 
-    <?php if (isset($_SESSION['noExisteEmail'])) { ?>
-        <div class="inicia_primero" id="ventana-emergente">
-            <?php echo $_SESSION['noExisteEmail']; ?>
-            <span class="icon-cancel-circle" id="close-alert"></span>
-        </div>
-    <?php session_unset();
-    } ?>
-    <!-- Login Start -->
-    <div class="container-xxl contact py-5">
+
+    <!-- About Start -->
+    <div class="container-xxl py-5">
         <div class="container">
-            <div class="section-title text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                <p class="fs-5 fw-medium fst-italic text-primary">Inicio de sesión</p>
-                <!-- <h1 class="display-6">TITULO GRANDE</h1> -->
-            </div>
-
-            <div class="row g-5 justify-content-center text-center">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-
-                    <form action="php/ingresar.php" method="POST" autocomplete="off">
-                        <div class="row g-3">
-                            <div class="col-md-12">
-                                <div class="form-floating">
-                                    <input required type="email" class="form-control" id="email" name="emailUser" placeholder="Ingresar tu email">
-                                    <label for="email">Ingresa email</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <input required type="password" name="clave" class="form-control" id="password" placeholder="Ingresar tu contraseña">
-                                    <label for="password">Contraseña</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <button class="btn btn-primary rounded-pill py-3 px-5" type="submit">Iniciar</button>
-                            </div>
+            <div class="row g-5">
+                <div class="col">
+                    <div class="card h-100" style="width: 18rem;">
+                        <img class="card-img-top" src="./img/noticia1.jpg" alt="Card image cap">
+                        <h5 class="card-title">Ecofert: Nutriendo la Agricultura Sostenible</h5>
+                        <div class="card-body">
+                            <p class="card-text">Sumérgete en el mundo de Ecofert y descubre cómo estamos revolucionando la agricultura a través de nuestra plataforma de fertilizantes naturales y nutrientes foliares. En este post, exploraremos los beneficios que brindamos a agricultores y al medio ambiente, así como los desafíos que enfrentamos en nuestra misión por un futuro agrícola más ecológico.</p>
                         </div>
-                    </form>
-                    <h3 class="mt-4">No estas registrado?</h3>
-                    <p class="mb-4"><a href="registro.php">Regístrate aquí</a>.</p>
+                        <div class="card-footer">
+                            <small class="text-muted">Última actualización hace 3 minutos</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100" style="width: 18rem;">
+                        <img class="card-img-top" src="./img/noticia2.jpg" alt="Card image cap">
+                        <h5 class="card-title">Ecofert: Su Socio en la Productividad Agrícola</h5>
+                        <div class="card-body">
+                            <p class="card-text"> En Ecofert, estamos comprometidos a ser su aliado número uno en la mejora de la productividad agrícola. Nuestra plataforma de fertilizantes naturales y nutrientes foliares no solo nutre sus cultivos, sino que también impulsa sus ganancias. Descubra cómo nuestra tecnología innovadora, asesoramiento experto y productos de alta calidad están transformando la forma en que los productores de fertilizantes y agricultores trabajan. </p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">Última actualización hace 3 minutos</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100" style="width: 18rem;">
+                        <img class="card-img-top" src="./img/noticia3.jpg" alt="Card image cap">
+                        <h5 class="card-title">Ecofert: Sostenibilidad de Principio a Fin</h5>
+                        <div class="card-body">
+                            <p class="card-text">En Ecofert, la sostenibilidad es más que una palabra de moda; es un compromiso que mantenemos de principio a fin. Nuestra plataforma no solo ofrece fertilizantes naturales y nutrientes foliares de alta calidad, sino que también promueve prácticas agrícolas sostenibles. Desde la producción de nuestros productos hasta su aplicación en los campos, cada paso se enfoca en minimizar el impacto ambiental.</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">Última actualización hace 3 minutos</small>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Login End -->
+    <!-- About End -->
+
+
 
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <?php require("php/footer.php") ?>
-
         </div>
     </div>
     <!-- Footer End -->
@@ -148,8 +142,10 @@ if (isset($_GET['url'])) {
     </div>
     <!-- Copyright End -->
 
+
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+
 
 
     <!-- JavaScript Libraries -->

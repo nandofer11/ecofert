@@ -12,8 +12,8 @@
     $fotoOriginal = $_FILES['imagen']['name'];
 	$nombreFoto = $fotoOriginal;
 	$cd = $_FILES['imagen']['tmp_name'];
-	$ruta = "../imagenesProductos/".$fotoOriginal;
-	$destinoFoto = "imagenesProductos/".$nombreFoto;
+	$ruta = "../img/".$fotoOriginal;
+	$destinoFoto = "img/".$nombreFoto;
 	$resultado = @move_uploaded_file($cd, $ruta);
     
     $descripcion = $_POST['descrip-producto'];

@@ -159,10 +159,11 @@ if (isset($_SESSION['datos'])) {
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
                     <div class="section-title">
                         <p class="fs-5 fw-medium fst-italic text-primary">Articulo</p>
-                        <h1 class="display-6">Principales plagas en los cultivos</h1>
+                        <h1 class="display-6">Ecofert: Fortaleciendo a los Agricultores y Productores.</h1>
                     </div>
-                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
-                    <p class="mb-4">Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna. Tempor erat elitr rebum at clita.</p>
+                    <p class="mb-4">Introducción:
+En el corazón de la misión de Ecofert se encuentra un compromiso sólido con el bienestar de los agricultores y productores locales. Como plataforma de comercio electrónico, Ecofert actúa como un puente entre los cultivadores y los consumidores, conectando a los agricultores directamente con los productores de fertilizantes naturales y nutrientes foliares. </p>
+                    <p class="mb-4">En este artículo, exploraremos cómo Ecofert beneficia y apoya a esta valiosa población, contribuyendo al crecimiento sostenible de la agricultura local.</p>
                     <a href="" class="btn btn-primary rounded-pill py-3 px-5">Leer más</a>
                 </div>
             </div>
@@ -177,15 +178,15 @@ if (isset($_SESSION['datos'])) {
             <div class="row g-0">
                 <div class="col-lg-6 py-5 wow fadeIn" data-wow-delay="0.1s">
                     <div class="py-5">
-                        <h1 class="display-6 mb-4">Seccion para un video <span class="text-white">Informativo</span></h1>
-                        <h5 class="fw-normal lh-base fst-italic text-white mb-5">Descripción del video publicitario, informativo, etc...</h5>
+                        <h1 class="display-6 mb-4">Transformando la Agricultura con <span class="text-white">Sostenibilidad</span></h1>
+                        <h5 class="fw-normal lh-base fst-italic text-white mb-5">Descubre nuestro compromiso con la sostenibilidad y la conexión directa entre productores y agricultores.</h5>
                         <div class="row g-4 mb-5">
                             <div class="col-sm-6">
                                 <div class="d-flex align-items-center">
                                     <div class="flex-shrink-0 btn-lg-square bg-white text-primary rounded-circle me-3">
                                         <i class="fa fa-check"></i>
                                     </div>
-                                    <span class="text-dark">Caracteristica uno</span>
+                                    <span class="text-dark">Conexión Directa</span>
                                 </div>
                             </div>
                             <div class="col-sm-6">
@@ -193,7 +194,7 @@ if (isset($_SESSION['datos'])) {
                                     <div class="flex-shrink-0 btn-lg-square bg-white text-primary rounded-circle me-3">
                                         <i class="fa fa-check"></i>
                                     </div>
-                                    <span class="text-dark">Caracteristica dos</span>
+                                    <span class="text-dark">Variedad Sostenible</span>
                                 </div>
                             </div>
                             <div class="col-sm-6">
@@ -201,7 +202,7 @@ if (isset($_SESSION['datos'])) {
                                     <div class="flex-shrink-0 btn-lg-square bg-white text-primary rounded-circle me-3">
                                         <i class="fa fa-check"></i>
                                     </div>
-                                    <span class="text-dark">Caracteristica tres</span>
+                                    <span class="text-dark">Consejos Expertos</span>
                                 </div>
                             </div>
                             <div class="col-sm-6">
@@ -209,7 +210,7 @@ if (isset($_SESSION['datos'])) {
                                     <div class="flex-shrink-0 btn-lg-square bg-white text-primary rounded-circle me-3">
                                         <i class="fa fa-check"></i>
                                     </div>
-                                    <span class="text-dark">Caracteristica cuatro</span>
+                                    <span class="text-dark">Impacto Local</span>
                                 </div>
                             </div>
                         </div>
@@ -240,7 +241,7 @@ if (isset($_SESSION['datos'])) {
                 <div class="modal-body">
                     <!-- 16:9 aspect ratio -->
                     <div class="ratio ratio-16x9">
-                        <iframe class="embed-responsive-item" src="" id="video" allowfullscreen allowscriptaccess="always" allow="autoplay"></iframe>
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/shorts/s7T0b5LTEI8" id="video" allowfullscreen allowscriptaccess="always" allow="autoplay"></iframe>
                     </div>
                 </div>
             </div>

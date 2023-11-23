@@ -217,6 +217,15 @@
     color: var(--light);
 }
 
+/* INICIO DE LA PAGINA CARRITO */
+.img-carrito{
+    width: 100px; 
+}
+.botones{
+    display: flex;
+}
+/* FIN DE LA PAGINA CARRITO */
+
 
 /*** Section Title ***/
 .section-title {

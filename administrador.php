@@ -66,7 +66,7 @@ if (isset($_GET['id']) and isset($_GET['url'])) {
     <!-- Dashboard Start -->
     <div class="container">
         <div class="row">
-            <h1 class="mt-5 text-center display-6">Panel de Administración</h1>
+            <h1 class="mt-5 text-center display-6 mb-5">Panel de Administración</h1>
             <div class="col-12 col-sm-4">
                 <div class="menu-adminstrador">
                     <ul class="list-group">
@@ -140,15 +140,16 @@ if (isset($_GET['id']) and isset($_GET['url'])) {
                     </div>
 
                     <div id="listaUsuarios" class="opcionMenu">
-                        <table id="table">
+                        <p class="mb-4 fs-4 animated zoomIn">Listado de clientes</p>
+                        <table id="table" class="table table-striped">
                             <tr>
                                 <th>Id</th>
                                 <th>Nombre</th>
-                                <th>Apellido</th>
-                                <th>Correo electrónico</th>
+                                <th>Apellidos</th>
+                                <th>Email</th>
                                 <th>Domicilio</th>
-                                <th>Ciudad residencia</th>
-                                <th>Telefono</th>
+                                <th>Ciudad</th>
+                                <th>Teléfono</th>
                                 <th>Rango</th>
                                 <th>Eliminar</th>
                             </tr>
@@ -182,14 +183,14 @@ if (isset($_GET['id']) and isset($_GET['url'])) {
                                     <td>
                                         <p><?php echo $datos['rango'] ?></p>
                                     </td>
-                                    <td><button><a href="php/deleteUser.php?id=<?php echo $datos['id'] ?>"><img src="imagenes/basura.png"></a></button></td>
+                                    <td><a href="php/deleteUser.php?id=<?php echo $datos['id'] ?>"><img src="img/basura.png"></a></td>
                                 </tr>
                             <?php } ?>
                         </table>
                     </div>
 
                     <div id="listaProductos" class="opcionMenu">
-                        <table>
+                        <table class="table table-striped">
                             <tr>
                                 <th>Id</th>
                                 <th>Nombre</th>
@@ -208,12 +209,12 @@ if (isset($_GET['id']) and isset($_GET['url'])) {
                             while ($columna = mysqli_fetch_array($resultado)) { ?>
                                 <tr>
                                     <td>
-                                        <h2><?php echo $columna['id_producto'] ?>
+                                        <p><?php echo $columna['id_producto'] ?>
                                     </td>
                                     <td>
-                                        <h2><?php echo $columna['nombreProducto'] ?></h2>
+                                        <p><?php echo $columna['nombreProducto'] ?></p>
                                     </td>
-                                    <td class="table-img"><img src="<?php echo $columna['imagenProducto'] ?>"></td>
+                                    <td class="table-img"><img class="img-fluid" src="<?php echo $columna['imagenProducto'] ?>"></td>
                                     <td>
                                         <p><?php echo $columna['descripcionProducto'] ?></p>
                                     </td>
@@ -221,13 +222,13 @@ if (isset($_GET['id']) and isset($_GET['url'])) {
                                         <p><?php echo $columna['gramosProducto'] ?></p>
                                     </td>
                                     <td>
-                                        <h3><?php echo $columna['precioProducto'] ?></h3>
+                                        <p><?php echo $columna['precioProducto'] ?></p>
                                     </td>
                                     <td>
                                         <p><?php echo $columna['tipo'] ?></p>
                                     </td>
-                                    <td><button><a href="php/deleteproducto.php?id=<?php echo $columna['id_producto'] ?>"><img src="imagenes/basura.png"></a></button></td>
-                                    <td><button class="modalEdit"><a href="administrador.php?url=listaProductos&id_producto=<?php echo $columna['id_producto'] ?>"><img src="imagenes/edit.png"></a></button></td>
+                                    <td><a href="php/deleteproducto.php?id=<?php echo $columna['id_producto'] ?>"><img src="img/basura.png"></a></td>
+                                    <td><a href="administrador.php?url=listaProductos&id_producto=<?php echo $columna['id_producto'] ?>"><img src="img/edit.png"></a></td>
                                 </tr>
                             <?php } ?>
                         </table>
@@ -318,7 +319,7 @@ if (isset($_GET['id']) and isset($_GET['url'])) {
                     </div>
 
                     <div id="envios" class="opcionMenu">
-                        <table class="table-estadoEnvios">
+                        <table class="table-estadoEnvios table table-striped">
                             <tr>
                                 <th>Id Compra</th>
                                 <th>Fecha de compra</th>

@@ -20,7 +20,7 @@ if (isset($conexion)) {
 if (isset($_GET['id'])) {
     $tipo = $_GET['id'];
 } else {
-    $tipo = 'fruta';
+    $tipo = 'organicos';
 }
 
 if (isset($_GET['rango'])) {
@@ -33,7 +33,7 @@ $resultado = $conexion->query($query);
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="utf-8">
@@ -88,7 +88,7 @@ $resultado = $conexion->query($query);
     <!-- Products Start -->
     <div class="container">
         <div class="row">
-            <div class="col-4">
+            <div class="col col-md-4">
                 <div class="menu-lateral">
                     <nav class="submenu-lateral">
                         <div class="card mb-3" style="width: 18rem;">
@@ -117,26 +117,62 @@ $resultado = $conexion->query($query);
                     </nav>
                 </div>
             </div>
-            <div class="col-8">
-                <div class="contenido-productos">
+            <div class="col col-md-8">
+                <div class="row">
                     <?php
-                    while ($columna = mysqli_fetch_array($resultado)) { ?>
-                        <div class='card'>
-                            <img src="<?php echo $columna['imagenProducto'] ?>">
-                            <h2><?php echo $columna['nombreProducto'] ?></h2>
-                            <p><em><?php echo $columna['gramosProducto'] ?></em></p><br>
-                            <h3 value="<?php echo $columna['precioProducto'] ?>">Precio: $ <?php echo $columna['precioProducto'] ?></h3><br>
-                            <button><a href="descripcion.php?id=<?php echo $columna['id_producto'] ?>">Ver más</a></button>
+                    if (isset($_GET['id'])) {
+                        $tipo = $_GET['id'];
+                        if ($tipo == 'organicos') {
+                            echo "<h2>Fertilizantes Orgánicos</h2>";
+                        } elseif ($tipo == 'nutrientes') {
+                            echo "<h2>Nutrientes foliares</h2>";
+                        } else {
+                            echo "<h2>Titulo por defecto</h2>";
+                        }
+                    } else {
+                        echo "<h2>Fertilizantes Orgánicos</h2>";
+                    }
+                    ?>
+                </div>
+                <div class="col">
+                    <div class="container">
+                        <div class="container">
+                            <div class="row">
+                                <?php
+                                $counter = 0; // Variable para contar las tarjetas en una fila
+                                while ($columna = mysqli_fetch_array($resultado)) {
+                                    if ($counter % 4 == 0) { // Comienza una nueva fila cada 4 tarjetas
+                                        echo '</div><div class="row">';
+                                    }
+                                ?>
+                                    <div class="col-md-3">
+                                        <div class="card h-100">
+                                            <img class="card-img-top" src="<?php echo $columna['imagenProducto'] ?>" alt="Card image cap">
+                                            <div class="card-body">
+                                                <h5 class="card-title"><?php echo $columna['nombreProducto'] ?></h5>
+                                                <p class="card-text">Peso: <?php echo $columna['gramosProducto'] ?> gr.</p>
+                                                <p class="card-text">Precio: <?php echo $columna['precioProducto'] ?></p>
+                                                <a class="btn btn-primary rounded-pill py-2 px-4" href="descripcion.php?id=<?php echo $columna['id_producto'] ?>">Ver más</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <?php
+                                    $counter++;
+                                }
+                                ?>
+                            </div>
                         </div>
-                    <?php } ?>
+                    </div>
+
+                    <!-- <div class="contenido-productos">
+
+                </div> -->
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Products End -->
-
-
+    
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s">
@@ -156,13 +192,27 @@ $resultado = $conexion->query($query);
                     &copy; <a class="fw-medium" href="#">EcoFert</a>, Todos los derechos reservados.
                 </div>
                 <div class="col-md-6 text-center text-md-end">
-                    <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
                     Trujillo <a class="fw-medium">Perú</a>
                 </div>
             </div>
         </div>
     </div>
     <!-- Copyright End -->
+
+    <!-- Products End -->
+
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
 
     <script src="js/buscar.js"></script>
     <script src="js/rangoPrecios.js"></script>

@@ -1,27 +1,16 @@
 <?php
 
 session_start();
-include("php/conexion.php");
 
-if (isset($_SESSION['datos'])) {
-    $usuario = $_SESSION['datos']['rango'];
-    $admitido = "admin";
-    if ($usuario == $admitido) {
-        // Si es admin
-    } else {
-        header("Location: index.php");
-    }
-} else {
-    header("Location: index.php");
-}
-
-if (isset($_GET['id']) and isset($_GET['url'])) {
+if (isset($_GET['url'])) {
+    $url = $_GET['url'];
 }
 
 ?>
 
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="utf-8">
@@ -81,16 +70,40 @@ if (isset($_GET['id']) and isset($_GET['url'])) {
 
 
     <!-- About Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-6">
-                    <p>Descripcion</p>
-                </div>
-                
-            </div>
+    <div class="container mt-4">
+    <div class="row">
+    <div class="col-md-6">
+    <h2>Empresa Ecofert</h2>
+    <p>Ecofert es una empresa peruana con sede en Trujillo, La Libertad, que se especializa en la producción y distribución de fertilizantes naturales. Nos dedicamos a ofrecer soluciones sostenibles para mejorar la productividad agrícola y promover prácticas agrícolas respetuosas con el medio ambiente.</p>
+
+    <p>Nuestro compromiso con la calidad y la innovación nos ha convertido en líderes en el mercado de fertilizantes naturales en la región. Trabajamos en estrecha colaboración con agricultores locales, brindándoles productos de alta calidad que ayudan a optimizar sus cosechas y a mejorar la salud de sus suelos.</p>
+
+    <p>Desde nuestra fundación, hemos estado comprometidos con el desarrollo sostenible de la agricultura, contribuyendo al bienestar de los agricultores y al crecimiento económico de nuestras comunidades. En Ecofert, creemos en un futuro agrícola más sostenible y saludable para todos.</p>
+</div>
+
+        <div class="col-md-6">
+            <img src="./img/post_.jpg" alt="Logo de Ecofert" class="img-fluid">
         </div>
     </div>
+
+    <div class="row mt-4 bg-primary p-4">
+        <div class="col">
+            <h3>Misión</h3>
+            <p>Nuestra misión es proporcionar fertilizantes naturales de alta calidad que promuevan la productividad agrícola, respetando al mismo tiempo el medio ambiente y la salud de los agricultores.</p>
+        </div>
+        <div class="col">
+            <h3>Visión</h3>
+            <p>Aspiramos a ser líderes en la industria de fertilizantes naturales, ofreciendo soluciones innovadoras y sostenibles que impulsen el crecimiento de la agricultura en la región y más allá.</p>
+        </div>
+
+        <div class="col">
+            <h3>Compromiso</h3>
+            <p>En Ecofert, nuestro compromiso va más allá de ser un simple intermediario en el comercio de fertilizantes naturales. Nos enorgullece ser un puente sólido entre los agricultores y los productores locales.</p>
+        </div>
+
+        
+    </div>
+</div>
     <!-- About End -->
 
 
